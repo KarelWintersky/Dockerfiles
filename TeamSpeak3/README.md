@@ -35,6 +35,7 @@ query_ip_whitelist=/data/query_ip_whitelist.txt \
 query_ip_blacklist=/data/query_ip_blacklist.txt
 ```
 
+Или, в одну строчку:
 ```
 docker run -d -p 9987:9987/udp -p 10011:10011 -p 30033:30033 --name teamspeak -v /srv/docker/docker.appdata/teamspeak3:/data -v /srv/docker/docker.appdata/teamspeak3/ts3server.sqlitedb:/opt/teamspeak/ts3server.sqlitedb blacktower/ts3server-alpine-sqlite logpath=/data/logs/ query_ip_whitelist=/data/query_ip_whitelist.txt query_ip_blacklist=/data/query_ip_blacklist.txt
 
